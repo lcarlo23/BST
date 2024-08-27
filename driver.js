@@ -1,0 +1,35 @@
+import { Tree } from './classes.js';
+import { randomNums, prettyPrint } from './functions.js';
+
+const testArray = randomNums(15, 100);
+const myTree = new Tree(testArray);
+console.log('is Balanced?');
+console.log(myTree.isBalanced());
+console.log('levelOrder');
+myTree.levelOrder((node) => console.log(node.data));
+console.log('preOrder');
+myTree.preOrder((node) => console.log(node.data));
+console.log('postOrder');
+myTree.postOrder((node) => console.log(node.data));
+console.log('inOrder');
+myTree.inOrder((node) => console.log(node.data));
+myTree.insert(154);
+myTree.insert(124);
+myTree.insert(364);
+myTree.insert(844);
+console.log('is Balanced?');
+console.log(myTree.isBalanced());
+prettyPrint(myTree.root);
+myTree.rebalance();
+console.log('is Balanced?');
+console.log(myTree.isBalanced());
+prettyPrint(myTree.root);
+
+console.log('levelOrder');
+myTree.levelOrder((node) => console.log(node.data));
+console.log('preOrder');
+myTree.preOrder((node) => console.log(node.data));
+console.log('postOrder');
+myTree.postOrder((node) => console.log(node.data));
+console.log('inOrder');
+myTree.inOrder((node) => console.log(node.data));
